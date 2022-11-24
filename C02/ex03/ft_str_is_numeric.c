@@ -6,46 +6,46 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 22:00:57 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/24 22:04:22 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:13:00 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int    ft_str_is_alpha(char *str)
+int	ft_str_is_alpha(char *str)
 {
-    int    flag;
-    int    i;
+	int	flag;
+	int	i;
 
-    i = 0;
-    if (!(*str))
-    {
-        flag = 1;
-    }
-    while (*str)
-    {
-        if (48 <= str[i] && str[i] <= 57)
-        {
-            flag = 1;
-        }
-        else
-        {
-            flag = 0;
-            break ;
-        }
-        str++;
-    }
-    return (flag);
+	i = 0;
+	if (!(*str))
+	{
+		flag = 1;
+	}
+	while (*str)
+	{
+		if (48 <= str[i] && str[i] <= 57)
+		{
+			flag = 1;
+		}
+		else
+		{
+			flag = 0;
+			break ;
+		}
+		str++;
+	}
+	return (flag);
 }
 
-int    main(void)
+int	main(void)
 {
-    char    c;
-    char    *str;
+	char	c;
+	char	*str;
 
-    str = &c;
-    str = "1111a1";
-    ft_str_is_alpha(str);
-    printf("%d", ft_str_is_alpha(str));
-    return (0);
+	str = &c;
+	str = "11111";
+	ft_str_is_alpha(str);
+	printf("%d", ft_str_is_alpha(str));
+	return (0);
 }
