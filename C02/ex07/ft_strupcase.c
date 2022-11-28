@@ -6,7 +6,7 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 23:07:16 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/28 11:01:14 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/28 11:04:57 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strupcase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -26,15 +26,13 @@ char	*ft_strupcase(char *str)
 		}
 		else
 		{
-		i++;
+			i++;
 		}
 	}
-	printf("%s", str);
-	return(str);
-
+	return (str);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
