@@ -6,7 +6,7 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 11:43:05 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/28 16:39:58 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:00:25 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
-	ft_decapitalize(str);
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -44,6 +43,10 @@ char	*ft_strcapitalize(char *str)
 			}	
 		}
 		i++;
+	}
+	if (97 <= str[0] && str[0] <= 122)
+	{
+		str[0] -= 32;
 	}
 	printf("%s", str);
 	return (str);
