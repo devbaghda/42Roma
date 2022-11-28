@@ -6,7 +6,7 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:54:03 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/24 12:25:17 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:06:17 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	while (*src)
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		*dest = *src;
+		dest[i] = src[i];
 		src++;
 		dest++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 
