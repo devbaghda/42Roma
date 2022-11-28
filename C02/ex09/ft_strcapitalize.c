@@ -6,14 +6,14 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 11:43:05 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/28 12:26:21 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:39:58 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcapitalize(char *str)
-{
+char	*ft_decapitalize(char *str)
+{	
 	int	i;
 
 	i = 0;
@@ -25,16 +25,26 @@ char	*ft_strcapitalize(char *str)
 		}
 		i++;
 	}
+	return (str);
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	int	i;
+
+	ft_decapitalize(str);
 	i = 0;
-	str[i] -= 32;
 	while (str[i] != '\0')
-	{		
-		if (str[i] == 32 && str[i + 1] != '\0')
+	{
+		if ((0 < str[i] && str[i] <= 47) || (91 <= str[i] && str[i] <= 96))
 		{
-			str[i + 1] -= 32;
-		}	
+			if (97 <= str[i + 1] && str[i + 1] <= 122)
+			{
+				str[i + 1] -= 32;
+			}	
+		}
 		i++;
-	}	
+	}
 	printf("%s", str);
 	return (str);
 }
