@@ -6,13 +6,13 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 22:34:33 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/24 22:53:17 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:40:55 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_uppercase(char *str)
 {	
 	int	flag;
 	int	i;
@@ -45,7 +45,7 @@ int	main(void)
 
 	str = &c;
 	str = "AAA";
-	ft_str_is_alpha(str);
+	ft_str_is_uppercase(str);
 	printf("%d", ft_str_is_alpha(str));
 	return (0);
 }
