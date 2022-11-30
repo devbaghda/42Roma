@@ -6,29 +6,29 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:42:09 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/29 21:22:31 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/30 15:06:42 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-unsigned int ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	unsigned int length;
+	unsigned int	length;
 
 	length = 0;
-	while(str[length] != '\0')
+	while (str[length] != '\0')
 	{
 		length++;
 	}
-	return(length);
+	return (length);
 }
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int i;
-	unsigned int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = ft_strlen(dest);
 	j = 0;
@@ -41,20 +41,19 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 	return (i + ft_strlen(src));
 }
 
-int main(void)
+int	main(void)
 {
-	char dest[20] = {"smth"};
-	char str2;
-	char *src;
-	unsigned int size;
+	char			dest[20] = {"smth"};
+	char			str2;
+	char			*src;
+	unsigned int	size;
 
 	src = &str2;
-	src = "effh";
-	size = 20;
-
+	src = "efasdfh";
+	size = 10;
 	printf("%d\n", ft_strlcat(dest, src, size));
 	printf("%s\n", dest);
 //    printf("%lu\n", strlcat(dest, src, size));
-//	printf("%s\n", dest);
-    return (0);
+//    printf("%s\n", dest);
+	return (0);
 }

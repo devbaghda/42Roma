@@ -6,7 +6,7 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:38:54 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/29 18:37:50 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/30 15:03:51 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
-	int k;	
+	int	i;
+	int	j;
+	int	k;
 
 	i = 0;
 	j = 0;
-
 	if (!(*to_find))
 	{
-		return(str);
+		return (str);
 	}
 	while (str[i] != '\0' && to_find[j] != '\0')
 	{
@@ -32,7 +31,7 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			if (to_find[j + 1] == '\0')
 			{
-				return(&str[i - j]);
+				return (&str[i - j]);
 			}
 			j++;
 			i++;
@@ -42,7 +41,7 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 3)
 	{

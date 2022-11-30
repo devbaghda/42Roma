@@ -6,17 +6,17 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:37:12 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/29 00:29:13 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/11/30 15:00:39 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (dest[i] != '\0')
@@ -33,16 +33,14 @@ char *ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-int main(void)
+int	main(void)
 {
-	char dest[100] = {"smth"};
-	char str2;
-	char *src;
+	char	dest[100] = {"smth"};
+	char	str2;
+	char	*src;
 
 	src = &str2;
 	src = "efgh";
-
 	ft_strcat(dest, src);
-	return(0);
+	return (0);
 }
-
