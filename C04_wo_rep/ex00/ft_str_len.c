@@ -6,7 +6,7 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:16:03 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/29 22:27:58 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:27:47 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 int	ft_str_len(char *str)
 {
-	int i; 
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
 		printf("%d", ft_str_len(argv[1]));
 	}
-	return(0);
+	return (0);
 }

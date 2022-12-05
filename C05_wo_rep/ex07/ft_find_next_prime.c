@@ -6,16 +6,16 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 22:54:33 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/12/04 23:18:40 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/12/05 13:03:41 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-	int i;
-	int flag;
+	int	i;
+	int	flag;
 
 	i = 2;
 	flag = 1;
@@ -27,7 +27,7 @@ int ft_is_prime(int nb)
 		return (1);
 	if (nb > 2)
 	{
-		while (i <= nb/2)	
+		while (i <= nb / 2)
 		{
 			if (nb % i == 0)
 			{
@@ -40,9 +40,9 @@ int ft_is_prime(int nb)
 	return (flag);
 }
 
-int ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
-	int i; 
+	int	i;
 
 	i = 0;
 	if (ft_is_prime(nb) == 0)
@@ -56,9 +56,9 @@ int ft_find_next_prime(int nb)
 	return (nb);
 }
 
-int main(void)
+int	main(void)
 {
-	int nb;
+	int	nb;
 
 	nb = -20;
 	printf("%d", ft_find_next_prime(nb));

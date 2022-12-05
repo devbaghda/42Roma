@@ -6,13 +6,13 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 20:41:03 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/12/04 20:47:26 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:55:16 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_recursive_power(int nb, int power)
+intf	t_recursive_power(int nb, int power)
 {
 	if (power < 0)
 		return (0);
@@ -23,10 +23,10 @@ int ft_recursive_power(int nb, int power)
 	return (nb);
 }
 
-int main(void)
+int	main(void)
 {
-	int nb;
-	int power;
+	int	nb;
+	int	power;
 
 	nb = 2;
 	power = 3;

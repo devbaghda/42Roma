@@ -6,19 +6,19 @@
 /*   By: davbaghd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:51:17 by davbaghd          #+#    #+#             */
-/*   Updated: 2022/11/30 00:52:44 by davbaghd         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:26:35 by davbaghd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
 	if (-2147483648 <= nb && nb <= 2147483647)
 	{
@@ -37,13 +37,13 @@ void ft_putnbr(int nb)
 			ft_putnbr(nb / 10);
 			nb %= 10;
 		}
-		ft_putchar('0' + nb);		
+		ft_putchar('0' + nb);
 	}
 }
 
-int main(void)
+int	main(void)
 {
-	int nb;
+	int	nb;
 
 	nb = -2147483648;
 	ft_putnbr(nb);
