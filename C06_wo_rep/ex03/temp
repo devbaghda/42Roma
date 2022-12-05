@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <string.h>
+#include <stdio.h>
+
+void ft_swap(char a, char b)
+{
+	char temp;
+	
+	temp = a;
+	//printf("%s", a);
+	a = b;
+	b = temp;
+}
+
+void ft_sort_params(int argc, char **str)
+{
+    char *temp;
+    int i, j;
+    i = 1;
+    //printf("%s, %s\n", str[1], str[2]);
+    //iterate over every params(the one tio compare to)
+    //printf("%s", str[0]);
+    while(i < argc - 1)
+    {
+        //iterate over every other params
+        j = i + 1;
+        while(j < argc - i - 1)
+        {
+            if(strcmp(str[i], str[j]) > 0)
+            {
+                    //printf("%s", a);
+                    //ft_swap(str[i], str[j]);
+                	temp = str[i];
+	                
+	                str[i] = str[j];
+	                str[j] = temp;
+            }
+            j++;
+            
+        }
+        j = 0;
+        i++;
+    }
+    
+}
